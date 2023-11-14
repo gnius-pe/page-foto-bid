@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form"
 import { useAuth } from "../context/authContext"
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Navigate,useNavigate } from "react-router-dom";
 
 
 export default function LoginPage() {
@@ -9,7 +11,9 @@ export default function LoginPage() {
     errors
   },} = useForm()
 
-  const {singnIn, errors:loginError} = useAuth();
+  const natigate = useNavigate();
+
+  const {singnIn,isAuthenticated ,errors:loginError} = useAuth();
 
   const onSubmitLogin = handleSubmit((data) =>{
     singnIn(data)
@@ -18,6 +22,12 @@ export default function LoginPage() {
   const detailsError = loginError.map((error,i) =>(
     <div className="bg-red-500 p-2 text-white my-2" key={i}>{error}</div>
     ));
+
+    useEffect(()=>{
+      if(isAuthenticated){
+          natigate("/fotos");
+      } 
+  },[isAuthenticated]);
 
 
   return (
