@@ -3,7 +3,7 @@ import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import { AuthProvider } from "./context/authContext"
 import FotoPage from "./pages/FotoPage"
-import FotoFormPage from "./pages/fotoFormPage"
+import FotoFormPage from "./pages/FotoFormPage"
 import ProfilePage from "./pages/ProfilePage"
 import HomePage from "./pages/HomePage"
 
