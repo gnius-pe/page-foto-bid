@@ -7,25 +7,15 @@ function TableTop() {
         {/* head */}
         <thead>
           <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
+            <th className="text-center">Name</th>
+            <th className="text-center">Job</th>
+            <th className="text-center">Likes</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           {/* row 1 */}
           <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
             <td>
               <div className="flex items-center gap-3">
                 <div className="avatar">
@@ -46,21 +36,16 @@ function TableTop() {
               Zemlak, Daniel and Leannon
               <br />
               <span className="badge badge-ghost badge-sm">
-                Desktop Support Technician
+                Technician
               </span>
             </td>
-            <td>Purple</td>
+            <td className="text-center w-3">124</td>
             <th>
-              <button className="btn btn-ghost btn-xs">details</button>
+              <button className="btn btn-ghost  btn-xs">Detalles</button>
             </th>
           </tr>
           {/* row 2 */}
           <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
             <td>
               <div className="flex items-center gap-3">
                 <div className="avatar">
@@ -80,20 +65,15 @@ function TableTop() {
             <td>
               Carroll Group
               <br />
-              <span className="badge badge-ghost badge-sm">Tax Accountant</span>
+              <span className="badge badge-ghost badge-sm">Tax</span>
             </td>
-            <td>Red</td>
-            <th>
-              <button className="btn btn-ghost btn-xs">details</button>
+            <td className="text-center w-3">98</td>
+            <th className="w-2">
+              <button className="btn btn-ghost btn-xs">Detalles</button>
             </th>
           </tr>
           {/* row 3 */}
           <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
             <td>
               <div className="flex items-center gap-3">
                 <div className="avatar">
@@ -114,60 +94,16 @@ function TableTop() {
               Rowe-Schoen
               <br />
               <span className="badge badge-ghost badge-sm">
-                Office Assistant I
+                Office
               </span>
             </td>
-            <td>Crimson</td>
+            <td className="text-center w-3">69</td>
             <th>
-              <button className="btn btn-ghost btn-xs">details</button>
+              <button className="btn btn-ghost btn-xs">Detalles</button>
             </th>
           </tr>
           {/* row 4 */}
-          <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
-            <td>
-              <div className="flex items-center gap-3">
-                <div className="avatar">
-                  <div className="mask mask-squircle w-12 h-12">
-                    <img
-                      src="https://i.postimg.cc/kgwdsKYD/kevin.jpg"
-                      alt="Avatar Tailwind CSS Component"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">Yancy Tear</div>
-                  <div className="text-sm opacity-50">Brazil</div>
-                </div>
-              </div>
-            </td>
-            <td>
-              Wyman-Ledner
-              <br />
-              <span className="badge badge-ghost badge-sm">
-                Community Outreach Specialist
-              </span>
-            </td>
-            <td>Indigo</td>
-            <th>
-              <button className="btn btn-ghost btn-xs">details</button>
-            </th>
-          </tr>
         </tbody>
-        {/* foot */}
-        <tfoot>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-            <th></th>
-          </tr>
-        </tfoot>
       </table>
     </div>
   );
