@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import { AuthProvider } from "./context/authContext"
-import FotoPage from "./pages/fotoPage"
+import FotoPage from "./pages/FotoPage"
 import FotoFormPage from "./pages/fotoFormPage"
 import ProfilePage from "./pages/ProfilePage"
-import HomePage from "./pages/homePage"
+import HomePage from "./pages/HomePage"
 
 import ProtectedRoute from "./ProtectedRoute"
 
