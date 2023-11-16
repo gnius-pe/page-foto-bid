@@ -1,4 +1,5 @@
 import React from "react";
+import MayorFotoCompModal from "./modal/MayorFotoCompModal";
 
 function MejorFotografo() {
   return (
@@ -14,7 +15,7 @@ function MejorFotografo() {
         <h2 className="card-title">Fotografia mas comprada</h2>
         <p>Click the button to watch on Jetflix app.</p>
         <div className="card-actions justify-end">
-          <button className="btn bg-violet-800 text-neutral-50 shadow-xl">Mas detalles</button>
+          <MayorFotoCompModal/>
         </div>
       </div>
     </div>
