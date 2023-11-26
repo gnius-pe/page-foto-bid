@@ -22,8 +22,8 @@ export const AuthProvider = ({children}) =>{
         try{
             const res = await registerRequest(user)
             console.log(res.data)
-            setUser(res.data)
             setAuthenticated(true)  
+            setUser(res.data)
         }catch(error){
             setErrors(error.response.data)
         }
@@ -59,19 +59,19 @@ export const AuthProvider = ({children}) =>{
                 return setUser(null)
             }
 
-            if(!cookies.token){
+            
                 console.log(cookies.token)
                 try {
                     const res = await verityTokenRequest(cookies.token)
-                    console.log(res)
+                    //console.log(res)
                     if(!res.data){
-                        setAuthenticated(true)
+                        setAuthenticated(false)
                         setLoading(false)
                         
                         return;   
                     }
                     
-                    setAuthenticated(false)
+                    setAuthenticated(true)
                     setUser(res.data)
                     setLoading(false)
                 } catch (error) {
@@ -79,7 +79,6 @@ export const AuthProvider = ({children}) =>{
                     setUser(null)
                     setLoading(false)
                 }
-            }
             
         };
         checkLogin();

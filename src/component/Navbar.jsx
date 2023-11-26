@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+
+  const natigate = useNavigate();
+
+  const newFoto = () =>{
+    natigate('/new-foto')
+  }
+
   return (
     <div className="navbar bg-gray-100 shadow-lg sticky top-0 z-10">
       <div className="flex-none">
@@ -21,7 +29,7 @@ function Navbar() {
               />
             </svg>
           </label>
-          
+
           <div
             tabIndex={0}
             className="flex flex-col h-full  p-3 w-64 z-[1]  dropdown-content "
@@ -211,6 +219,33 @@ function Navbar() {
         <a className="btn btn-ghost text-xl">Foto Bid</a>
       </div>
       <div className="flex-none">
+        <button className="btn btn-ghost btn-circle" onClick={newFoto}>
+          <div className="indicator">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+                <path
+                  d="M8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15ZM8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16Z"
+                  fill="#212529"
+                />
+                <path
+                  d="M8 4C8.13261 4 8.25979 4.05268 8.35355 4.14645C8.44732 4.24021 8.5 4.36739 8.5 4.5V7.5H11.5C11.6326 7.5 11.7598 7.55268 11.8536 7.64645C11.9473 7.74021 12 7.86739 12 8C12 8.13261 11.9473 8.25979 11.8536 8.35355C11.7598 8.44732 11.6326 8.5 11.5 8.5H8.5V11.5C8.5 11.6326 8.44732 11.7598 8.35355 11.8536C8.25979 11.9473 8.13261 12 8 12C7.86739 12 7.74021 11.9473 7.64645 11.8536C7.55268 11.7598 7.5 11.6326 7.5 11.5V8.5H4.5C4.36739 8.5 4.24021 8.44732 4.14645 8.35355C4.05268 8.25979 4 8.13261 4 8C4 7.86739 4.05268 7.74021 4.14645 7.64645C4.24021 7.55268 4.36739 7.5 4.5 7.5H7.5V4.5C7.5 4.36739 7.55268 4.24021 7.64645 4.14645C7.74021 4.05268 7.86739 4 8 4Z"
+                  fill="#212529"
+                />
+              
+              <defs>
+                <clipPath id="clip0_9_197810">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </button>
         <button className="btn btn-ghost btn-circle">
           <div className="indicator">
             <svg
@@ -268,7 +303,7 @@ function Navbar() {
             <div className="w-10 rounded-full">
               <img
                 alt="Tailwind CSS Navbar component"
-                src="https://res.cloudinary.com/dqblumv7r/image/upload/v1700628312/foto%20bid/foto%20de%20perfil/default/perfil_default_ee1vel.png"
+                src="https://source.unsplash.com/100x100/?portrait"
               />
             </div>
           </label>

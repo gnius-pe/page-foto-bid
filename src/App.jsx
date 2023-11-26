@@ -21,7 +21,7 @@ function App() {
 
           <Route element={<ProtectedRoute/>}>
             <Route path="/fotos" element={<FotoPage/>}/>
-            <Route path="/add-fotos" element={<FotoFormPage/>}/>
+            <Route path="/new-foto" element={<FotoFormPage/>}/>
             <Route path="/foto/:id" element={<FotoFormPage/>}/>
             <Route path="/profile" element={<ProfilePage/>}/>
           </Route>

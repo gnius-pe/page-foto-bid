@@ -1,8 +1,12 @@
 import React from "react";
 
 function FotoFormPage (){
+
+
     return (
-        <div>Foto Form Page</div>
+        <div>
+            hola mund
+        </div>
     )
 }
 
