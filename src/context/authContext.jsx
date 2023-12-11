@@ -66,8 +66,7 @@ export const AuthProvider = ({children}) =>{
                     //console.log(res)
                     if(!res.data){
                         setAuthenticated(false)
-                        setLoading(false)
-                        
+                        setLoading(false)         
                         return;   
                     }
                     

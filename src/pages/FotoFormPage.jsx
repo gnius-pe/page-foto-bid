@@ -5,7 +5,7 @@ function FotoFormPage (){
 
     return (
         <div>
-            hola mund
+            hola
         </div>
     )
 }
