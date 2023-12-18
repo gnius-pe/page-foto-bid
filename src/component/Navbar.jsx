@@ -1,5 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+
 
 function Navbar() {
 
@@ -7,6 +8,10 @@ function Navbar() {
 
   const newFoto = () =>{
     natigate('/new-foto')
+  }
+
+  const inHome = () => {
+    natigate('/fotos')
   }
 
   return (
@@ -215,7 +220,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1" onClick={inHome}>
         <a className="btn btn-ghost text-xl">Foto Bid</a>
       </div>
       <div className="flex-none">
@@ -312,13 +317,13 @@ function Navbar() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">
+              <NavLink to="/profile" className="justify-between">
                 Profile
                 <span className="badge">New</span>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a>Settings</a>
+              <NavLink to="/seting-profile">configura tu perfil</NavLink>
             </li>
             <li>
               <a>Logout</a>

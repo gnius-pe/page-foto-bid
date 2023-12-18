@@ -4,7 +4,7 @@ import Navbar from "../component/Navbar";
 function FotoPage() {
   return (
     <div>
-      <Navbar />
+      <Navbar/>
       <section className="py-6  dark:text-gray-50">
         <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
           <img
