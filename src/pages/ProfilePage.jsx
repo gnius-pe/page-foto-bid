@@ -14,20 +14,24 @@ function ProfilePage() {
   return (
     <div>
       <Navbar />
-      <div className="sm:h-72 h-96 flex justify-center items-center">
-        <div className=" sm:h-64 sm:w-6/12 h-80 sm:flex sm:items-center flex justify-center items-center flex-col sm:flex-row sm:justify-center gap-7">
-          <div className="avatar">
-            <div className="w-32 sm:w-48 rounded-full">
+      <div className="sm:h-72 h-96 flex justify-center items-center ">
+        <div className=" sm:h-64 sm:w-6/12 h-80 sm:flex sm:items-center flex justify-center items-center flex-col sm:flex-row sm:justify-center gap-7 ">
+          <div className="avatar flex flex-col items-center ">
+            <div className="w-32 sm:w-48 rounded-full shadow-lg">
               <img src="https://source.unsplash.com/100x100/?portrait" />
             </div>
+            <p className="label overline">{user.email}</p>
           </div>
-          <div className=" w-64">
+          <div className=" w-64 ">
             {" "}
-            <p className="label">Nombre :{}</p>{" "}
-            <p className="label">Apellido :</p>
-            <p className="label">Edad :</p>
-            <p className="label">Pais :</p>
-            <p className="label">Correo : {user.email}</p>
+            <div className="w-full h-7  flex justify-around ">
+              <div className="bg-slate-200 rounded-md h-8 w-20 flex justify-center items-center shadow-md">14 fotos</div>
+              <div className="bg-slate-200 rounded-md h-8 w-28 flex justify-center items-center shadow-md">21 seguidores</div>
+            </div>
+            <div className=" h-24 flex flex-col justify-center">
+              <p className="label font-semibold	 h-5">Igor Ramos Cruzado</p>{" "}
+              <p className="label  font-thin h-5 ">Peru</p>
+            </div>
           </div>
         </div>
       </div>

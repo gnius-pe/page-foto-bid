@@ -40,7 +40,7 @@ export function FotoProvider({ children }) {
   }
 
   return (
-    <FotoContext.Provider value={{ fotos, createFoto,cargaFoto, getFotos,navega }}>
+    <FotoContext.Provider value={{ fotos, createFoto,cargaFoto, getFotos,navega ,setNavega}}>
       {children}
     </FotoContext.Provider>
   );

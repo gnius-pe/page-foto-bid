@@ -1,10 +1,12 @@
 import React from "react";
 import { useNavigate, NavLink } from "react-router-dom";
+import { useAuth } from "../context/authContext";
 
 
 function Navbar() {
 
   const natigate = useNavigate();
+  const {logout} = useAuth();
 
   const newFoto = () =>{
     natigate('/new-foto')
@@ -326,7 +328,9 @@ function Navbar() {
               <NavLink to="/seting-profile">configura tu perfil</NavLink>
             </li>
             <li>
-              <a>Logout</a>
+              <NavLink to="/" onClick={()=>{
+                logout();
+              }}>Logout</NavLink>
             </li>
           </ul>
         </div>
