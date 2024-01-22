@@ -20,7 +20,7 @@ function ProfilePage() {
             <div className="w-32 sm:w-48 rounded-full shadow-lg">
               <img src="https://source.unsplash.com/100x100/?portrait" />
             </div>
-            <p className="label overline">{user.email}</p>
+            
           </div>
           <div className=" w-64 ">
             {" "}
@@ -31,6 +31,7 @@ function ProfilePage() {
             <div className=" h-24 flex flex-col justify-center">
               <p className="label font-semibold	 h-5">Igor Ramos Cruzado</p>{" "}
               <p className="label  font-thin h-5 ">Peru</p>
+              <p className="label font-thin h-5">{user.email}</p>
             </div>
           </div>
         </div>
